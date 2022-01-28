@@ -58,19 +58,19 @@ after you  have commited your code
 
 # receiving changes from live 
 
-`git pull origin main`
+fetch all changes to live : `git pull origin main`
 
-`git fetch origin main && git diff --name-only main origin/main`
-
-
-# connecting local  repo to remote
-
-https://github.com/developerRitesh/git_common_commands.git
-
-
-
-# fetching  data from remote 
+to check which file will come in git pull :  `git fetch origin main && git diff --name-only main origin/main`
 
 #  revert the git to  last  working status
+
+git checkout 09f0a0d1e322daa445a9ac923f38c30e048cbccb
+
+when fixed then move the head to master by 
+
+git checkout master
+
+git pull origin master
+
 
 #  handling the merge conflict  
