@@ -1,6 +1,6 @@
 
 # how to start git 
-git  init    (initialising git)
+`git  init`    (initialising git)
 
 git add index.html   (here we are adding a file to git , this way we can multiple files )
 
