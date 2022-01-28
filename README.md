@@ -62,8 +62,6 @@ after you  have commited your code
 
 `git fetch origin main && git diff --name-only main origin/main`
 
-https://github.com/developerRitesh/git_common_commands.git
-
 
 # connecting local  repo to remote
 
