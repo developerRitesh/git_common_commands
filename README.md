@@ -74,3 +74,6 @@ git pull origin master
 
 
 #  handling the merge conflict  
+
+#  merge branch to master
+git merge new-branch
