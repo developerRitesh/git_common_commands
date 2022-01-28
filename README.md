@@ -6,6 +6,7 @@
 
 `git  commit  -m "whatever message you  may  like"`   (this is the last step of commit)
 
+
 # common operations 
 
 addding files in git  :  `git add index.html` 
@@ -13,6 +14,10 @@ addding files in git  :  `git add index.html`
 addding multiple files in git in one command :  `git add one.html two.html three.html four.html`
 
 check the difference in file from the last commit : `git diff  one.html`
+
+show  all  git commits : `git branch`
+
+check files in staging area : `git status`
 
 
 # what to do if wrong file added ,how to  remove a file  from git , or  how to remove a commit    
@@ -35,6 +40,29 @@ also  not commit  will  be deleted  but  not the content .
 completly  deleting a commit and all the changes to the files   : `git reset --hard 62634b7af806e9af53a039497c025fdde73841e4` 
 
 this command will  delete  the commit  and all the  content with it .
+
+
+# sending changes  to  remote repo 
+
+remember if you know  that you will  need to  send your changes to remote server , NEVER START YOUR WORK WITHOUT GIT PULL . Nahi to merge conflicts aaengi hi ,jo fir solve ni hoti . so first step  even before  starting your work is  git pull .  
+
+`git  commit  -m "whatever message you  may  like"`   (this is the last step of commit)
+
+after you  have commited your code  
+
+`sudo git push origin main`
+
+`Username for 'https://github.com': youruserrname`
+
+`Password for 'https://riteshprajapati3.14@gmail.com@github.com':YOURPASSWORD`
+
+# receiving changes from live 
+
+`git pull origin main`
+
+`git fetch origin main && git diff --name-only main origin/main`
+
+https://github.com/developerRitesh/git_common_commands.git
 
 
 # connecting local  repo to remote
