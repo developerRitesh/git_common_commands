@@ -15,7 +15,9 @@ addding multiple files in git in one command :  `git add one.html two.html three
 
 check the difference in file from the last commit : `git diff  one.html`
 
-show  all  git commits : `git branch`
+show  all  git commits : `git log`
+
+show  all  git brancgs : `git branch`
 
 check files in staging area : `git status`
 
