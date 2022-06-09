@@ -78,4 +78,14 @@ git pull origin master
 #  handling the merge conflict  
 
 #  merge branch to master
+first move to master branch , you should be on the branch in which you want to merge another branch 
 git merge new-branch
+
+#  stash
+
+to see all the files present in the stash 
+git stash list --stat
+
+to add specific files to stash 
+git stash -- fileone.txt files2.txt
+
