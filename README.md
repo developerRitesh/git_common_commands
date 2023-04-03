@@ -100,5 +100,12 @@ git stash show -p stash@{0}
 to apply last stash.
 git stash apply stash@{0}
 
+Delete Stashed Changes
+git stash drop STASH-NAME
+
+To clear the entire stash, run the command
+git stash clear
+
+
 
 
