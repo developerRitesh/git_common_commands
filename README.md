@@ -82,10 +82,23 @@ first move to master branch , you should be on the branch in which you want to m
 git merge new-branch
 
 #  stash
+stash is used to store temporary change , this is usefull in file conflictions , we can store our local changes in tenporary area , just like we take bacnup of files so they dont get overwrite , we can use git stash instead 
+
 
 to see all the files present in the stash 
+
 git stash list --stat
+or 
+git stash list
 
 to add specific files to stash 
 git stash -- fileone.txt files2.txt
+
+to see last stashed changes.
+git stash show -p stash@{0}
+
+to apply last stash.
+git stash apply stash@{0}
+
+
 
