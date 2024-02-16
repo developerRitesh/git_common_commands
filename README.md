@@ -145,6 +145,11 @@ git config --global user.name "Your Name"
 
 git cherry-pick asdasasdasdasdasddsadsas
 
+git rebase -i HEAD~3
+reword squash and other . 
+
+
+
  
 
 
