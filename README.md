@@ -148,6 +148,10 @@ git cherry-pick asdasasdasdasdasddsadsas
 git rebase -i HEAD~3
 reword squash and other . 
 
+git reflog (restore bracnhed , commits) 
+
+git reset commitid
+
 
 
  
