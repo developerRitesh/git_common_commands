@@ -128,5 +128,8 @@ To clear the entire stash, run the command
 git stash clear
 
 
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
 
 
