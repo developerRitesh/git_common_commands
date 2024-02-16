@@ -106,25 +106,33 @@ git pull origin master
 
 error: Your local changes to the following files would be overwritten by checkout , Please commit your changes or stash them before you switch branches.
 
+git stash
+
+list
 git stash list
 
-list all files
------------------
+files
 git show stash@{0} --stat
 
-to add specific files to stash 
------------------------------
-git stash push MyClass.h MyClass.cpp
+single file 
+git diff stash@{1} -- category.php
 
-to apply last stash.
+
+git show stash@{0} (for all changes)
+
 git stash apply stash@{0}
 
-Delete Stashed Changes
-git stash drop STASH-NAME
+git stash push MyClass.h MyClass.cpp
+
+
+restore specific files from stash 
+-----------------------------
+git restore --source=stash@{0} -- app/code/FME/Restrictcustomergroup/etc/frontend/di.xml
+
+git stash drop stash@{0}
 
 To clear the entire stash, run the command
 git stash clear
-
 
 git config --global user.email "you@example.com"
   
