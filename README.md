@@ -14,9 +14,18 @@
 
 `git diff`
 
-`git diff filename`
+`git diff filename.php`
 
-`git diff --name-only`
+`git show fdc7da2a008448c3af859ed551256a5ba876e7db`
+
+`git show --name-only fdc7da2a008448c3af859ed551256a5ba876e7db`
+
+or
+
+git show fdc7da2a008448c3af859ed551256a5ba876e7db --compact-summary
+
+git diff 7c11b4fd95a652d0838f9c3d19a916e9aeade441 3c0f49c35ab0e6c6f53f22086f323a315e30993d
+
 
 # Branching
 
