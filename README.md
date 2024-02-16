@@ -1,25 +1,28 @@
 
-# how to start git 
+# Basic Operations
 `git  init`    (initialising git)
+`git add index.html`   (we can also add multiple files like `git add one.html two.html three.html four.html` )
+`git status`
+`git  commit  -m "whatever message you  may  like"`   
+`git push origin branchname`  
 
-`git add index.html`   (here we are adding a file to git , this way we can multiple files )
+# Branching
+`git branch`
+`git checkout -b feature`
+`git push origin feature`
 
-`git  commit  -m "whatever message you  may  like"`   (this is the last step of commit)
 
+# fetching branch from origin 
 
-# common operations 
+`git fetch --all`
+`git branch -r`
+`git switch remotebranch`
 
-addding files in git  :  `git add index.html` 
+# deleting branch
 
-addding multiple files in git in one command :  `git add one.html two.html three.html four.html`
+`git branch -d branchname`  (if it show error like : The branch 'branchname' is not fully merged use `git branch -D ab`)
+`git push origin -d "branchname` 
 
-check the difference in file from the last commit : `git diff  one.html`
-
-show  all  git commits : `git log`
-
-show  all  git brancgs : `git branch`
-
-check files in staging area : `git status`
 
 
 # what to do if wrong file added ,how to  remove a file  from git , or  how to remove a commit    
