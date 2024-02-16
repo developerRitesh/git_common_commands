@@ -141,6 +141,10 @@ git config --global user.name "Your Name"
 # practical scenarios 
 1. added a commit and left a file to add
 2. added the commit altogether to a different branch
+3. need a commit work from differnt branch
+
+git cherry-pick asdasasdasdasdasddsadsas
+
  
 
 
