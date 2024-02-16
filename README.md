@@ -1,26 +1,35 @@
 
 # Basic Operations
 `git  init`    (initialising git)
+
 `git add index.html`   (we can also add multiple files like `git add one.html two.html three.html four.html` )
+
 `git status`
+
 `git  commit  -m "whatever message you  may  like"`   
+
 `git push origin branchname`  
 
 # Branching
 `git branch`
+
 `git checkout -b feature`
+
 `git push origin feature`
 
 
 # fetching branch from origin 
 
 `git fetch --all`
+
 `git branch -r`
+
 `git switch remotebranch`
 
 # deleting branch
 
 `git branch -d branchname`  (if it show error like : The branch 'branchname' is not fully merged use `git branch -D ab`)
+
 `git push origin -d "branchname` 
 
 
