@@ -18,7 +18,7 @@
 `git push origin feature`
 
 
-# fetching branch from origin 
+# Fetching branch from origin 
 
 `git fetch --all`
 
