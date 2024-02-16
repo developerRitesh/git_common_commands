@@ -10,7 +10,16 @@
 
 `git push origin branchname`  
 
+# Staging Operations
+
+`git diff`
+
+`git diff filename`
+
+`git diff --name-only`
+
 # Branching
+
 `git branch`
 
 `git checkout -b feature`
@@ -26,49 +35,45 @@
 
 `git switch remotebranch`
 
-# deleting branch
+# Editing Commits
+
+`git commit --amend -m "an updated commit message"`
+
+`git add hello.py`
+`git commit` 
+
+(Realize you forgot to add the changes from main.py) 
+`git add main.py` 
+
+`git commit --amend --no-edit`
+
+The --no-edit flag will allow you to make the amendment to your commit without changing its commit message.
+
+# Reverting Files
+
+git restore --staged filename.php
+
+# Reverting Commits
+
+`git reset --soft 62634b7af806e9af53a039497c025fdde73841e4` 
+`git reset 62634b7af806e9af53a039497c025fdde73841e4` 
+`git reset --hard ebbbca3`
+
+the above commit id will not be of commit  you want to delete , this  is  the commit  id of previos commit that you want to  move . the command will keep this commit and delete all commit afterward .
+
+if you do reset soft the changed files will still be added in the green area and you will not have to use git add to add them again , while normal reset will add those files to the untracked files in the red area .
+
+
+# Deleting branch
 
 `git branch -d branchname`  (if it show error like : The branch 'branchname' is not fully merged use `git branch -D ab`)
 
 `git push origin -d "branchname` 
 
+# Merging branch
 
-
-# what to do if wrong file added ,how to  remove a file  from git , or  how to remove a commit    
-
-removing files in git  :  `git reset HEAD index.html` 
-
-note : the above command will reset command git add index.html , if you will do  git  status , this file will be again shown with the changes that you  made .The abpve command do not make changes to file and your code will not  be deleted . 
-
-removing files in git and deleting the  changes also  :  
-
-`git reset HEAD index.html`  (and then) 
-`git checkout index.html`
-
-reverting a commit  : `git reset --soft 62634b7af806e9af53a039497c025fdde73841e4` 
-
-the above commit  id will not be of commit  you want to delete , this  is  the commit  id of previos commit that you want to  move . the command will keep this commit and delete all commit afterward .
-
-also  not commit  will  be deleted  but  not the content . 
-
-completly  deleting a commit and all the changes to the files   : `git reset --hard 62634b7af806e9af53a039497c025fdde73841e4` 
-
-this command will  delete  the commit  and all the  content with it .
-
-
-# sending changes  to  remote repo 
-
-remember if you know  that you will  need to  send your changes to remote server , NEVER START YOUR WORK WITHOUT GIT PULL . Nahi to merge conflicts aaengi hi ,jo fir solve ni hoti . so first step  even before  starting your work is  git pull .  
-
-`git  commit  -m "whatever message you  may  like"`   (this is the last step of commit)
-
-after you  have commited your code  
-
-`sudo git push origin main`
-
-`Username for 'https://github.com': youruserrname`
-
-`Password for 'https://riteshprajapati3.14@gmail.com@github.com':YOURPASSWORD`
+git checkout branchyouwanttomergeinto (you will need to move to branch in which you want to merge)
+git merge new-branch (this will merge new-branch to the current branch that you are in)
 
 # receiving changes from live 
 
@@ -76,9 +81,10 @@ fetch all changes to live : `git pull origin main`
 
 to check which file will come in git pull :  `git fetch origin main && git diff --name-only main origin/main`
 
-#  revert the git to  last  working status
+#  Rollback
 
-git checkout 09f0a0d1e322daa445a9ac923f38c30e048cbccb
+`git log`
+`git checkout 09f0a0d1e322daa445a9ac923f38c30e048cbccb`
 
 when fixed then move the head to master by 
 
@@ -86,12 +92,6 @@ git checkout master
 
 git pull origin master
 
-
-#  handling the merge conflict  
-
-#  merge branch to master
-first move to master branch , you should be on the branch in which you want to merge another branch 
-git merge new-branch
 
 #  stash
 stash is used to store temporary change , this is usefull in file conflictions , we can store our local changes in tenporary area , just like we take bacnup of files so they dont get overwrite , we can use git stash instead 
