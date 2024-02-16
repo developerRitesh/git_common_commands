@@ -102,21 +102,19 @@ git checkout master
 git pull origin master
 
 
-#  stash
-stash is used to store temporary change , this is usefull in file conflictions , we can store our local changes in tenporary area , just like we take bacnup of files so they dont get overwrite , we can use git stash instead 
+#  Stash
 
+error: Your local changes to the following files would be overwritten by checkout , Please commit your changes or stash them before you switch branches.
 
-to see all the files present in the stash 
-
-git stash list --stat
-or 
 git stash list
 
-to add specific files to stash 
-git stash -- fileone.txt files2.txt
+list all files
+-----------------
+git show stash@{0} --stat
 
-to see last stashed changes.
-git stash show -p stash@{0}
+to add specific files to stash 
+-----------------------------
+git stash push MyClass.h MyClass.cpp
 
 to apply last stash.
 git stash apply stash@{0}
@@ -128,8 +126,14 @@ To clear the entire stash, run the command
 git stash clear
 
 
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+  
+git config --global user.name "Your Name"
+
+# practical scenarios 
+1. added a commit and left a file to add
+2. added the commit altogether to a different branch
+ 
 
 
 
